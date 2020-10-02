@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="36">
+
+	<title>chat</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js'></script>
+  <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+<body>
+
+
+<div id='signup-form'>
+  <div id="form-register">
+
+  
+
+    <h1>Sign up for admin</h1>
+      <form action='/register' method='POST'>
+        <input class='reg' type='text' name='username' placeholder="username">
+        <input class='reg' type='password' name='password' placeholder="password">
+        <input class='reg' type='password' name='isAdmin' placeholder="admin code">
+
+        <button id='reg' type="submit">Submit</button>
+
+
+        
+
+     </form>
+   </div>
+</div>
+
+
+<script type="text/javascript" src="/chat.js"></script>
+
+<script type="text/javascript" src="/main.js"></script>
+
+</body>
+</html>

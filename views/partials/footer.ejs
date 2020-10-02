@@ -1,0 +1,57 @@
+  
+       <div class='footer'>
+       
+
+            <img id='copyright' src='/pics/copyright-32.png'>
+            <h3 id='copyright-text'>2020</h3>
+          
+          <a href='http://facebook.com'><img src='/pics/facebook-32.png'></a>
+          <a href='http://twitter.com'><img src='/pics/twitter-32.png'></a>
+          <a href='http://instagram.com'><img src='/pics/instagram-32.png'></a>
+          <a href='http://youtube.com'><img src='/pics/youtube-4-32.png'></a>
+
+        </div>
+
+          <button id="open-button" onclick="openForm()">Chat</button>
+          <div id="mario-chat">
+            <div id="chat-window">
+              <div id="output"></div>
+              <div id="feedback"></div>
+            </div>
+                 <% if(currentUser && !currentUser.isAdmin){ %>
+                  <input id="handle" type="text" value="<%=currentUser.username%>" placeholder="Handle">
+                  <input class="tooltip" id="message" type="text" placeholder="Message">
+
+                  
+                <% } %>
+                <% if(currentUser && currentUser.isAdmin){ %>
+                  <input id="handle" type="text" value="admin" placeholder="Handle">
+                  <input class="tooltip" id="message" type="text" placeholder="Message">
+
+                  <% } %>
+
+                
+                  <span class="tooltiptext">Регистрација е потребна за Chat</span>
+                
+         
+
+
+            <button id="send">Send</button>
+            <button id='close-button' onclick="closeForm()">Close</button>
+          
+        </div>
+         
+       
+
+    
+
+	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+	<script type="text/javascript" src="/chat.js"></script>
+
+    <script type="text/javascript" src="/main.js"></script>
+	
+</body>
+</html>

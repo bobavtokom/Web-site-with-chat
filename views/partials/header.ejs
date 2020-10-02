@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="36">
+
+	<title>chat</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js'></script>
+  <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+<body>
+
+       <nav id='nav' class='main'>
+           <img src='/pics/tree-51-48.png'>
+         <ul class="main-ul" id="main_ul">
+             <li><a href='/'>Почетна</a></li>
+          <li><a href=''>Категорија <i id='k' class="fa fa-angle-down"></i></a>
+            <ul class='submenu'>
+              <li><a href='/content_page'> Сите категории</a></li>
+              <li><a href='/vicovi'>Хумор</a></li>
+              <li><a href='/sport'>Спорт</a></li>  
+            </ul>
+          </li>
+              <li><a href='/about'>За нас</a> </li>
+        </ul>
+        <% if(!currentUser){ %>
+          <h4 id='login-label'>Најава:</h4>
+        <form id='login-form' action='/login' method='POST'>
+          <input class='login-input' type='text' name='username' placeholder="username">
+          <input class='login-input' type='password' name='password' placeholder="password">
+          <input id='submit-button' type='submit'>
+      
+      </form>
+      <% } %>
+        <% if(currentUser && currentUser.isAdmin){ %>
+          <a href='/content_page/new'><button class='post'>Креирај пост</button></a>
+          
+
+       <% } %>
+       <% if(currentUser){ %>
+        <a class='regis' href='/logout'>Одјава</a>
+
+         <% } %>
+        <% if(!currentUser){ %>
+        <a class='regis' href='/register'>Регистрација</a>
+         <% } %>
+        <div class='search-form'>
+          <form action='/content_page' method="GET">
+            <input id='search' type="search" name='search' placeholder="Search...">
+          </form>
+         </div>
+         
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+       </nav>

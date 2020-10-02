@@ -1,0 +1,9 @@
+<form action="/sport/<%= sport._id %>?_method=PUT" method="POST">
+    <input type='text' name='sport[name]' value="<%= sport.name %>">
+    <input type='text'  name='sport[img]'  value="<%= sport.img %>">
+    <input type='text'  name='sport[body]'  value="<%= sport.body %>">
+    <input type='text'  name='sport[video]'  value="<%= sport.video %>">
+    
+    <button>Post</button>
+
+</form>

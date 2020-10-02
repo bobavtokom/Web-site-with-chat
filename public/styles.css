@@ -1,0 +1,149 @@
+Skip to content
+Why GitHub? 
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+
+Sign in
+Sign up
+22187282iamshaunjp/websockets-playlist
+ Code Issues 3 Pull requests 7 Projects 0 Security Insights
+Join GitHub today
+GitHub is home to over 40 million developers working together to host and review code, manage projects, and build software together.
+
+websockets-playlist/public/styles.css
+ iamshaunjp added lesson 2 code
+6afe82e on May 3, 2017
+69 lines (60 sloc)  1.03 KB
+  
+body{
+    font-family: 'Nunito';
+    height: 100%;
+    width: 100%;
+}
+
+h2{
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #575ed8;
+}
+
+#mario-chat{
+    
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    width: 300px;
+    margin: 0;
+    
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+    border-radius: 2px;
+    display: block;
+    z-index: 1;
+    
+}
+#open-button{
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    width: 300px;
+    margin: 0;
+    border: 1px solid #7e8b2f;;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+#close-button{
+    margin-top: 1px;
+    background: linear-gradient(135deg, black 30%, #d46644 100%);
+    border-radius: 2%;
+
+}
+#send{
+    border-radius: 2%; 
+}
+#close-button:hover{
+    background: linear-gradient(135deg, #75321d 30%, #eeb6a6 100%);
+
+}
+
+
+#chat-window{
+    border-top-left-radius:3%;
+    border-top-right-radius:5% ;
+
+    height: 300px;
+    overflow: auto;
+    background: #f9f9f9;
+}
+
+#output p{
+    padding: 14px 0px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+#feedback p{
+    color: #aaa;
+    padding: 14px 0px;
+    margin: 0 20px;
+}
+
+#output strong{
+    color: #575ed8;
+}
+
+label{
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+}
+
+input{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #eee;
+    border: 0;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-family: Nunito;
+    font-size: 16px;
+}
+#handle{
+   
+}
+
+button{
+    background: linear-gradient(135deg, black 30%, #23bd9b 100%);
+    border: 1px solid #7e8b2f;;
+    color: #b5f5ca;
+    font-size: 18px;
+    border-radius: 5%;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+  
+
+
+}
+button:hover{
+    background: linear-gradient(135deg, #504c4c 30%, #4df5d0 100%);
+
+
+    padding: 0.8rem;
+    color: #7ca68a;
+}
+
+
+
+
+
+
+
+
+

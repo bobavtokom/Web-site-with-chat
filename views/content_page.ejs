@@ -1,0 +1,82 @@
+<%- include('./partials/header') %>
+  
+<% if(currentUser && currentUser.isAdmin){ %>
+<h1>Hello isAdmin</h1>
+<% } %>
+      <div class='wrap-cont'>
+         <div class='sidebar'>
+           <div class='recent_box'>
+           <h4 class='title' >Последно <br> додадени:</h4>
+           <hr id='recent_hr'>
+           <div class="recent_3_all">
+             
+              <% contents.slice(-3).forEach(function(cont){ %>
+                <div class='recent_3'>
+                 <a href='/content_page/<%=cont._id%>'> <img class='cont-img' src='<%= cont.img %>'></a>
+                 <a id='recent_3_name' class='title-a' href='/content_page/<%=cont._id%>'><h5><%= cont.name %></h5></a>
+                 <p id="recent_date"><%= cont.createdAt.toDateString() %></p>
+
+                </div>
+                <hr class="recent_post_hr">
+                <% }) %>
+             
+        
+        </div>
+      </div>
+         </div>
+         <div class='content-all'>
+           <div>
+          <% if(noMatch.length>0){ %>
+              <h3><%= noMatch %></h3>
+         <% } %>
+        </div>
+        <% contents.forEach(function(cont){ %>    
+         <div class='thumb'>
+          
+          <a href='/content_page/<%=cont._id%>'> <img class='cont-img' src='<%= cont.img %>'></a>
+           <div class='vic-div'>
+               <a class='title-a' href='/content_page/<%=cont._id%>'><h1><%= cont.name %></h1></a>
+               <p class='cont-p'><%= cont.body %></p>
+               <h4 id="date"><%= cont.createdAt.toDateString() %></h4>
+               
+              </div>
+         </div>
+            
+         <% }) %>
+         </div>
+        
+         <div class='sidebar-right'>
+        
+           
+          <iframe id='sidebar-right-content' width="360" height="360" 
+          src="https://www.youtube.com/embed/Rk3pJ6nqPzs"
+           frameborder="0" 
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen></iframe>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+
+    </div>
+         
+       
+
+    
+
+	
+    
+
+		  
+		
+ 
+		
+	
+    <%- include('./partials/footer') %>
+ 
+
+
+	
+
+

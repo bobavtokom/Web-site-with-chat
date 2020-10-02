@@ -1,0 +1,44 @@
+<%- include('./partials/header') %>
+
+
+<div class='wrap-cont'>
+   <div class='sidebar'>
+     <div class='recent_box'>
+     <h4 class='title' >Последно <br> додадени:</h4>
+     <hr id='recent_hr'>
+     <div class="recent_3_all">
+       
+       
+       
+  
+  </div>
+</div>
+   </div>
+         <div class='show-thumb'>
+          <div class='show-content-cont'>
+      
+           <h1><%= cont.name %></h1>
+           <img src='<%= cont.img %>'>
+           <p class='cont-p'><%= cont.body %></p>
+           <% if(currentUser && currentUser.isAdmin){ %>
+           <form action="<%= cont._id %>?_method=DELETE" method='POST'>
+              <button>delete</button>
+           </form>
+           <a href='/content_page/<%= cont._id %>/edit'><button>edit</button></a>
+           <% } %>
+         </div>
+         
+       </div>
+         <div class='sidebar-right'>
+           <div>
+          <iframe id='sidebar-right-content' width="360" height="360" 
+          src="https://www.youtube.com/embed/Rk3pJ6nqPzs"
+           frameborder="0" 
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen></iframe>
+          </div>
+        </div>
+        
+      </div>
+
+      <%- include('./partials/footer') %>

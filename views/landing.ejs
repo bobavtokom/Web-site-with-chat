@@ -1,0 +1,58 @@
+<%- include('./partials/header') %>
+       <div class='home-grid-cont'>
+        <div class='sidebar'>
+          <div class='recent_box'>
+            <h4 class='title' >Последно <br> додадени:</h4>
+            <hr id='recent_hr'>
+            <div class="recent_3_all">
+              
+               <% contents.slice(-3).forEach(function(cont){ %>
+                 <div class='recent_3'>
+                  <a href='/content_page/<%=cont._id%>'> <img class='cont-img' src='<%= cont.img %>'></a>
+                  <a id='recent_3_name' class='title-a' href='/content_page/<%=cont._id%>'><h5><%= cont.name %></h5></a>
+                  <p id="recent_date"><%= cont.createdAt.toDateString() %></p>
+
+                 </div>
+                 <hr class="recent_post_hr">
+                 <% }) %>
+              
+         
+         </div>
+       </div>
+       </div>
+       <div class='container' id='slider'>
+        <div class="slides">
+          
+          <div class='slide'>
+            <img src='https://miro.medium.com/max/10944/1*S81O15rjKfG-BFdnNC6-GQ.jpeg'>
+          </div>
+          <div class='slide'>
+            <img src='https://businessbrokercolorado.com/wp-content/uploads/2019/10/art.jpg'>
+            <div class="slide-content">
+              <h1>Art</h1>
+            </div>
+          </div>
+          <div class='slide'>
+            <img src='https://digitalgoa.com/wp-content/uploads/2016/12/sports-in-Goa.png'>
+          </div>
+        </div>
+           <div class='slide-controls'>
+             <button id='prev-btn'>
+              <i class="fa fa-angle-left" style="font-size:24px"></i>
+
+             </button>
+             <button id='next-btn'>
+              <i class="fa fa-angle-right" style="font-size:24px"></i>
+
+             </button>
+           </div>
+          </div>
+          <div class='sidebar-right'>
+            <ul>
+               <li>kolelelel</li>
+               <li>kolelelel</li>
+               <li>kolelelel</li>
+            </ul>
+           </div>
+        </div>
+        <%- include('./partials/footer') %>
