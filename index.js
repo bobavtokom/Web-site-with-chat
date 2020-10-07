@@ -10,7 +10,7 @@ var express=require("express"),
 	passportLocalMongoose=require('passport-local-mongoose'),
 	jsdom=require('jsdom-global')();
 
-		mongoose.connect('mongodb+srv://bobweb:<loptata1>@cluster0.4lxii.mongodb.net/<chat>?retryWrites=true&w=majority',{useNewUrlParser:true, useUnifiedTopology: true});
+		mongoose.connect('mongodb+srv://bobweb:<loptata1>@cluster0.4lxii.mongodb.net/<sliki>?retryWrites=true&w=majority',{useNewUrlParser:true, useUnifiedTopology: true});
 
 	//mongoose.connect('mongodb://localhost/chat',{useNewUrlParser:true, useUnifiedTopology: true});
 app.use(require('express-session')({
